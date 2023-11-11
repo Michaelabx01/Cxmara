@@ -36,7 +36,7 @@ public class SwipeToDeleteCallback extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Puedes manejar la actualización de la base de datos si es necesario
+
     }
 
     public void saveImageUri(Uri uri) {

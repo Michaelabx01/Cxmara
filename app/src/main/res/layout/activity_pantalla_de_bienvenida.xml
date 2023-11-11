@@ -19,7 +19,7 @@
             android:layout_width="400dp"
             android:layout_height="350dp"
             app:lottie_autoPlay="true"
-            app:lottie_fileName="ic_camera_v1.json"
+            app:lottie_fileName="ic_camera_v2.json"
             app:lottie_imageAssetsFolder="assets"
             app:lottie_loop="true" />
 
@@ -47,12 +47,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20sp"
-        android:gravity="center"
-        android:textColor="@color/white"
         android:layout_alignBottom="@+id/ok"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
         android:fontFamily="@font/segoeuil"
-        android:text="Versíon 1.0"
+        android:gravity="center"
+        android:text="Versíon X.x"
+        android:textColor="@color/white"
         android:textSize="20sp" />
 
 </RelativeLayout>
