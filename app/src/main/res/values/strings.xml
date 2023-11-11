@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Cxmara</string>
+    <string name="open">Camara</string>
+    <string name="gallery">Galeria</string>
+    <string name="save">Guardar</string>
+    <string name="image_saved">Imagen guardada en la galeria</string>
+    <string name="autorizacion">Se Guardo Con Exitó</string>
+    <string name="title_register">Tome una Foto</string>
+</resources>

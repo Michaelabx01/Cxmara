@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Pantalla_de_bienvenida">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="400dp"
+            android:layout_height="350dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="ic_camera_v1.json"
+            app:lottie_imageAssetsFolder="assets"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/segoeuil"
+            android:text="@string/app_name"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/segoeuil"
+            android:gravity="center"
+            android:text="Desarrollado por: Michael Valdiviezo M."
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_alignBottom="@+id/ok"
+        android:fontFamily="@font/segoeuil"
+        android:text="Versíon 1.0"
+        android:textSize="20sp" />
+
+</RelativeLayout>
