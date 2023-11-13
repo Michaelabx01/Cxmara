@@ -10,6 +10,8 @@ import android.net.Uri;
 
 import java.util.ArrayList;
 
+// SwipeToDeleteCallback.java
+// SwipeToDeleteCallback.java
 public class SwipeToDeleteCallback extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "ImageDatabase";
@@ -36,7 +38,7 @@ public class SwipeToDeleteCallback extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        // Manejar actualizaciones de la base de datos si es necesario
     }
 
     public void saveImageUri(Uri uri) {
@@ -44,6 +46,12 @@ public class SwipeToDeleteCallback extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_IMAGE_URI, uri.toString());
         db.insert(TABLE_IMAGES, null, values);
+        db.close();
+    }
+
+    public void deleteImageUri(Uri uri) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_IMAGES, COLUMN_IMAGE_URI + "=?", new String[]{uri.toString()});
         db.close();
     }
 
@@ -60,7 +68,7 @@ public class SwipeToDeleteCallback extends SQLiteOpenHelper {
                 uris.add(Uri.parse(uriString));
             } while (cursor.moveToNext());
 
-            cursor.close();
+            cursor.close(); // Cerrar el cursor
         }
 
         db.close();
@@ -68,6 +76,7 @@ public class SwipeToDeleteCallback extends SQLiteOpenHelper {
         return uris;
     }
 }
+
 
 
 
